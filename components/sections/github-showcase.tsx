@@ -6,6 +6,7 @@ import { SITE } from "@/constants/site";
 import { seeded } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { ButtonLink } from "@/components/ui/button";
+import { HScroll } from "@/components/ui/hscroll";
 import { Magnetic } from "@/components/ui/magnetic";
 import { Reveal } from "@/components/ui/reveal";
 import { SectionHeading } from "@/components/ui/section-heading";
@@ -66,7 +67,10 @@ export function GithubShowcase() {
                   Representative
                 </span>
               </div>
-              <div className="scrollbar-x mt-5 -mx-4 overflow-x-auto px-4 pb-3 sm:-mx-7 sm:px-7">
+              <HScroll
+                className="mt-5"
+                viewportClassName="-mx-4 px-4 sm:-mx-7 sm:px-7"
+              >
                 <div
                   className="grid w-max grid-flow-col gap-[3px]"
                   style={{ gridTemplateRows: `repeat(${DAYS}, 10px)` }}
@@ -81,7 +85,7 @@ export function GithubShowcase() {
                     />
                   ))}
                 </div>
-              </div>
+              </HScroll>
               <div className="mt-3 flex items-center justify-end gap-1.5 text-[10px] text-muted">
                 Less
                 {LEVEL_CLASSES.map((cls) => (
@@ -100,7 +104,7 @@ export function GithubShowcase() {
           <div className="flex min-w-0 flex-col gap-6">
             <Reveal delay={0.1}>
               <div className="card-surface overflow-hidden p-2">
-                <div className="scrollbar-x overflow-x-auto">
+                <HScroll trackClassName="mx-2 mb-1 mt-2">
                   <div className="grid min-w-[400px] grid-cols-3 divide-x divide-line">
                     {GH_STATS.map((stat) => (
                       <div key={stat.label} className="px-4 py-5 text-center">
@@ -113,13 +117,13 @@ export function GithubShowcase() {
                       </div>
                     ))}
                   </div>
-                </div>
+                </HScroll>
               </div>
             </Reveal>
             <Reveal delay={0.18}>
               <div className="card-surface flex-1 p-5 sm:p-7">
                 <h3 className="text-sm font-semibold">Top languages</h3>
-                <div className="scrollbar-x -mx-1 overflow-x-auto px-1 pb-2">
+                <HScroll viewportClassName="-mx-1 px-1">
                   <div className="min-w-[280px]">
                     <div className="mt-4 flex h-2.5 overflow-hidden rounded-full">
                       {TOP_LANGUAGES.map((lang) => (
@@ -149,15 +153,19 @@ export function GithubShowcase() {
                       ))}
                     </ul>
                   </div>
-                </div>
+                </HScroll>
               </div>
             </Reveal>
           </div>
         </div>
 
         {/* Pinned repositories */}
-        <div className="scrollbar-x mt-6 -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:-mx-6 sm:px-6 md:mx-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-0 md:pb-0">
-          {PINNED_REPOS.map((repo, i) => (
+        <HScroll
+          className="mt-6"
+          viewportClassName="-mx-4 px-4 pb-1 sm:-mx-6 sm:px-6 md:mx-0 md:overflow-visible md:px-0 md:pb-0"
+        >
+          <div className="flex snap-x snap-mandatory gap-4 md:grid md:grid-cols-3 md:gap-6">
+            {PINNED_REPOS.map((repo, i) => (
             <Reveal key={repo.name} delay={0.07 * i} className="min-w-[280px] flex-shrink-0 snap-start md:min-w-0 md:flex-shrink">
               <a
                 href={repo.href}
@@ -203,8 +211,9 @@ export function GithubShowcase() {
                 </div>
               </a>
             </Reveal>
-          ))}
-        </div>
+            ))}
+          </div>
+        </HScroll>
       </div>
     </section>
   );

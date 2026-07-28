@@ -51,7 +51,7 @@ export function Navbar() {
         </a>
 
         {/* Desktop links */}
-        <ul className="hidden items-center gap-1 md:flex">
+        <ul className="hidden items-center gap-1 lg:flex">
           {NAV.map((item) => (
             <li key={item.href}>
               <a
@@ -87,7 +87,7 @@ export function Navbar() {
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
-            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-card md:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-line bg-card lg:hidden"
           >
             {open ? <X size={18} /> : <Menu size={18} />}
           </button>
@@ -102,7 +102,7 @@ export function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 top-16 z-40 bg-bg md:hidden"
+            className="fixed inset-0 top-16 z-40 bg-bg lg:hidden"
           >
             <ul className="container-x flex flex-col gap-1 py-10">
               {[...NAV, { label: "Contact", href: "#contact" }].map(

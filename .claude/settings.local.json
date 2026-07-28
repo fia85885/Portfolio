@@ -14,7 +14,9 @@
       "Bash(curl -s -o /dev/null -w '%{http_code} size=%{size_download}' http://localhost:3000/hero.png)",
       "Bash(echo \"PHOTO: $\\(curl -s -o /dev/null -w '%{http_code} size=%{size_download}' http://localhost:3000/hero.png\\)\")",
       "Bash(curl -s http://localhost:3000)",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "PowerShell(npx tsc --noEmit)",
+      "PowerShell(npx tsc --noEmit; if \\($?\\) { \"TYPECHECK: PASS\" })"
     ]
   }
 }

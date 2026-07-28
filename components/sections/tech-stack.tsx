@@ -58,14 +58,14 @@ export function TechStack() {
                   key={item.name}
                   className="group absolute animate-float"
                   style={{
-                    left: `${item.x}%`,
-                    top: `${item.y}%`,
+                    left: `min(${item.x}%, calc(100% - ${item.size + 10}px))`,
+                    top: `min(${item.y}%, calc(100% - ${item.size + 10}px))`,
                     animationDuration: `${item.dur}s`,
                     animationDelay: `${item.delay}s`,
                   }}
                 >
                   <div
-                    className="flex items-center justify-center rounded-2xl border border-line bg-card text-ink shadow-card transition-all duration-300 group-hover:-translate-y-1 group-hover:text-accent group-hover:shadow-lift"
+                    className="flex items-center justify-center rounded-2xl border border-line bg-card text-ink shadow-card transition-all duration-300 group-hover:-translate-y-1 group-hover:text-accent group-hover:shadow-lift max-sm:scale-90"
                     style={{ width: item.size, height: item.size }}
                     title={label}
                   >

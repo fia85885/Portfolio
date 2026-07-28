@@ -45,7 +45,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
             aria-hidden
             className="pointer-events-none absolute -right-16 -top-16 h-48 w-48 rounded-full bg-accent/10 blur-3xl opacity-0 transition-opacity duration-700 group-hover:opacity-100"
           />
-          <div className="aspect-[4/3] w-full transition-transform duration-700 ease-out group-hover:scale-[1.03] group-hover:-rotate-[0.5deg]">
+          <div className="aspect-[4/3] min-h-[270px] w-full transition-transform duration-700 ease-out group-hover:scale-[1.03] group-hover:-rotate-[0.5deg] sm:min-h-0">
             <Mock />
           </div>
         </div>

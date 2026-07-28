@@ -39,7 +39,7 @@ export function Experience() {
           {EXPERIENCE.map((job, i) => (
             <Reveal key={job.company} delay={0.08 * i}>
               <article className="group border-b border-line py-8 transition-colors hover:bg-ink/[0.015] md:py-10">
-                <div className="grid gap-6 md:grid-cols-[1.1fr_1.5fr_auto] md:items-start">
+                <div className="grid gap-6 md:grid-cols-[240px_1fr] md:items-start lg:grid-cols-[1.1fr_1.5fr_auto]">
                   {/* Company */}
                   <div className="flex items-start gap-4">
                     <span
@@ -86,7 +86,7 @@ export function Experience() {
                   </div>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2 md:justify-end">
+                  <div className="flex flex-wrap gap-2 md:col-span-2 lg:col-span-1 lg:justify-end">
                     {job.tags.map((tag) => (
                       <Badge key={tag} size="sm">
                         {tag}
