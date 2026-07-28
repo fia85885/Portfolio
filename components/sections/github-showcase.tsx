@@ -148,9 +148,9 @@ export function GithubShowcase() {
         </div>
 
         {/* Pinned repositories */}
-        <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mt-6 -mx-4 px-4 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0">
           {PINNED_REPOS.map((repo, i) => (
-            <Reveal key={repo.name} delay={0.07 * i}>
+            <Reveal key={repo.name} delay={0.07 * i} className="min-w-[280px] flex-shrink-0 snap-start md:min-w-0 md:flex-shrink">
               <a
                 href={repo.href}
                 target="_blank"
