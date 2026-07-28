@@ -84,7 +84,7 @@ export function Hero() {
     <section
       ref={scope}
       id="top"
-      className="relative overflow-hidden pb-20 pt-32 md:pt-40"
+      className="relative overflow-hidden pb-16 pt-28 md:pb-20 md:pt-40"
       aria-label="Introduction"
     >
       {/* Ambient background */}
@@ -95,7 +95,7 @@ export function Hero() {
         <div className="hero-ring absolute right-[8%] top-[14%] hidden h-72 w-72 rounded-full border border-dashed border-ink/10 lg:block" />
       </div>
 
-      <div className="container-x relative grid items-center gap-16 lg:grid-cols-[1.05fr_0.95fr]">
+      <div className="container-x relative grid items-center gap-10 md:gap-16 lg:grid-cols-[1.05fr_0.95fr]">
         {/* Vertical side label — mirrors the reference's rotated caption */}
         <span
           aria-hidden
@@ -109,7 +109,7 @@ export function Hero() {
           {/* Stat counters */}
           <motion.dl
             {...rise(0.1)}
-            className="mb-10 grid max-w-md grid-cols-2 gap-x-10 gap-y-5 sm:grid-cols-4"
+            className="mb-8 grid max-w-md grid-cols-2 gap-x-8 gap-y-4 sm:grid-cols-4 md:mb-10 md:gap-x-10 md:gap-y-5"
           >
             {STATS.map((stat) => (
               <div key={stat.label}>
@@ -212,7 +212,7 @@ export function Hero() {
           initial={{ opacity: 0, scale: 0.96, filter: "blur(10px)" }}
           animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
           transition={{ duration: 1, ease: EASE, delay: 0.35 }}
-          className="relative mx-auto w-full max-w-md"
+          className="relative mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md"
           style={
             reduce
               ? undefined
@@ -225,21 +225,21 @@ export function Hero() {
 
           {/* Floating glass chips */}
           <div
-            className="glass absolute -left-6 top-10 hidden animate-float rounded-2xl px-4 py-3 sm:block"
+            className="glass absolute -left-2 top-10 hidden animate-float rounded-2xl px-3 py-2.5 text-[10px] sm:-left-6 sm:block sm:px-4 sm:py-3 sm:text-xs"
             style={{ animationDelay: "0.2s" }}
           >
             <p className="text-xs font-semibold">RAG Pipelines</p>
             <p className="text-[11px] text-muted">~95% answer relevance</p>
           </div>
           <div
-            className="glass absolute -right-4 top-1/3 hidden animate-float rounded-2xl px-4 py-3 sm:block"
+            className="glass absolute -right-1 top-1/3 hidden animate-float rounded-2xl px-3 py-2.5 text-[10px] sm:-right-4 sm:block sm:px-4 sm:py-3 sm:text-xs"
             style={{ animationDelay: "1.1s" }}
           >
             <p className="text-xs font-semibold">MCP Server</p>
             <p className="text-[11px] text-muted">Claude Desktop ready</p>
           </div>
           <div
-            className="glass absolute -left-8 bottom-24 hidden animate-float rounded-2xl px-4 py-3 sm:block"
+            className="glass absolute -left-2 bottom-24 hidden animate-float rounded-2xl px-3 py-2.5 text-[10px] sm:-left-8 sm:block sm:px-4 sm:py-3 sm:text-xs"
             style={{ animationDelay: "2s" }}
           >
             <p className="text-xs font-semibold">Agentic AI</p>

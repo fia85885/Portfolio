@@ -44,7 +44,7 @@ export function TechStack() {
 
         {/* Floating icon cloud */}
         <Reveal delay={0.15}>
-          <div className="card-surface relative mt-14 h-[340px] overflow-hidden md:h-[380px]">
+          <div className="card-surface relative mt-14 h-[280px] overflow-hidden sm:h-[340px] md:h-[380px]">
             <div
               aria-hidden
               className="bg-dots absolute inset-0 opacity-50 [mask-image:radial-gradient(60%_60%_at_50%_50%,black,transparent)]"

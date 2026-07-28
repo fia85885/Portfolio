@@ -17,7 +17,7 @@ export function Blog() {
           align="center"
         />
 
-        <div className="mt-14 grid gap-6 md:grid-cols-3">
+        <div className="mt-14 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {BLOG_POSTS.map((post, i) => (
             <Reveal key={post.title} delay={0.08 * i}>
               <article className="card-surface group flex h-full flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">

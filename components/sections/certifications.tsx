@@ -14,7 +14,7 @@ export function Certifications() {
         <div className="mt-12 grid gap-6 md:grid-cols-2">
           {CERTIFICATIONS.map((cert, i) => {
             const cardClass =
-              "card-surface group flex items-center justify-between gap-6 p-7 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift";
+              "card-surface group flex flex-col gap-4 p-6 transition-all duration-300 hover:-translate-y-1 hover:shadow-lift sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:p-7";
             const inner = (
               <>
                 <div className="flex items-center gap-5">

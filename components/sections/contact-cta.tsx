@@ -69,7 +69,7 @@ export function ContactCta() {
   return (
     <section id="contact" className="section" aria-label="Contact">
       <div className="container-x">
-        <div className="relative overflow-hidden rounded-3xl border border-line bg-card px-6 py-16 text-center shadow-card md:px-12 md:py-24">
+        <div className="relative overflow-hidden rounded-3xl border border-line bg-card px-5 py-12 text-center shadow-card sm:px-6 sm:py-16 md:px-12 md:py-24">
           {/* Ambient glow */}
           <div
             aria-hidden

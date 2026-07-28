@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+      },
       colors: {
         bg: "rgb(var(--bg) / <alpha-value>)",
         card: "rgb(var(--card) / <alpha-value>)",

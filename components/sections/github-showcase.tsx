@@ -148,7 +148,7 @@ export function GithubShowcase() {
         </div>
 
         {/* Pinned repositories */}
-        <div className="mt-6 grid gap-6 md:grid-cols-3">
+        <div className="mt-6 grid gap-6 sm:grid-cols-2 md:grid-cols-3">
           {PINNED_REPOS.map((repo, i) => (
             <Reveal key={repo.name} delay={0.07 * i}>
               <a

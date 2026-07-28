@@ -16,7 +16,7 @@ export function Specializations() {
           align="center"
         />
 
-        <div className="mt-14 grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-5">
+        <div className="mt-14 grid grid-cols-1 gap-4 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
           {SPECIALIZATIONS.map((spec, i) => (
             <Reveal key={spec.name} delay={0.05 * i}>
               <div className="card-surface group h-full p-5 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lift">

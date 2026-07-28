@@ -11,7 +11,7 @@ export function BannerCta() {
     <section className="py-6" aria-label="Availability">
       <div className="container-x">
         <Reveal>
-          <div className="relative overflow-hidden rounded-3xl bg-[#0B0B0C] px-8 py-14 text-center text-white md:px-16 md:py-20">
+          <div className="relative overflow-hidden rounded-3xl bg-[#0B0B0C] px-5 py-10 text-center text-white sm:px-8 sm:py-14 md:px-16 md:py-20">
             {/* Quiet blue glow */}
             <div
               aria-hidden

@@ -8,7 +8,7 @@ import { Magnetic } from "@/components/ui/magnetic";
 export function Footer() {
   return (
     <footer className="bg-[#0B0B0C] text-white">
-      <div className="container-x py-16 md:py-20">
+      <div className="container-x py-12 md:py-20">
         {/* Big email — the reference footer's signature move */}
         <div className="flex flex-col gap-10 border-b border-white/10 pb-14 md:flex-row md:items-end md:justify-between">
           <div>
@@ -17,7 +17,7 @@ export function Footer() {
             </p>
             <a
               href={`mailto:${SITE.email}`}
-              className="mt-3 inline-block break-all text-3xl font-semibold tracking-tight transition-colors hover:text-white/70 md:text-5xl"
+              className="mt-3 inline-block break-all text-2xl font-semibold tracking-tight transition-colors hover:text-white/70 sm:text-3xl md:text-5xl"
             >
               {SITE.email}
             </a>
@@ -71,7 +71,7 @@ export function Footer() {
               </li>
             ))}
           </ul>
-          <div className="flex items-center gap-6">
+          <div className="flex flex-col items-center gap-4 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <p className="text-sm text-white/40">
               © {new Date().getFullYear()} {SITE.name}. All rights reserved.
             </p>

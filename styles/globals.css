@@ -63,11 +63,11 @@
 
 @layer utilities {
   .container-x {
-    @apply mx-auto w-full max-w-[1160px] px-6 md:px-10;
+    @apply mx-auto w-full max-w-[1160px] px-4 sm:px-6 md:px-10;
   }
 
   .section {
-    @apply scroll-mt-24 py-24 md:py-32;
+    @apply scroll-mt-24 py-16 sm:py-20 md:py-32;
   }
 
   .text-hero {
