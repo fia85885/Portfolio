@@ -66,7 +66,7 @@ export function GithubShowcase() {
                   Representative
                 </span>
               </div>
-              <div className="mt-5 -mx-4 px-4 overflow-x-auto pb-2 sm:-mx-7 sm:px-7">
+              <div className="scrollbar-x mt-5 -mx-4 overflow-x-auto px-4 pb-3 sm:-mx-7 sm:px-7">
                 <div
                   className="grid w-max grid-flow-col gap-[3px]"
                   style={{ gridTemplateRows: `repeat(${DAYS}, 10px)` }}
@@ -148,7 +148,7 @@ export function GithubShowcase() {
         </div>
 
         {/* Pinned repositories */}
-        <div className="mt-6 -mx-4 px-4 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-4 sm:-mx-6 sm:px-6 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:pb-0">
+        <div className="scrollbar-x mt-6 -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto px-4 pb-4 sm:-mx-6 sm:px-6 md:mx-0 md:grid md:grid-cols-3 md:gap-6 md:overflow-visible md:px-0 md:pb-0">
           {PINNED_REPOS.map((repo, i) => (
             <Reveal key={repo.name} delay={0.07 * i} className="min-w-[280px] flex-shrink-0 snap-start md:min-w-0 md:flex-shrink">
               <a
