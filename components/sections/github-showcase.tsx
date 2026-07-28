@@ -59,14 +59,14 @@ export function GithubShowcase() {
         <div className="mt-14 grid gap-6 lg:grid-cols-[1.6fr_1fr]">
           {/* Contribution graph — representative placeholder */}
           <Reveal>
-            <div className="card-surface p-7">
+            <div className="card-surface overflow-hidden p-4 sm:p-7">
               <div className="flex items-center justify-between">
                 <h3 className="text-sm font-semibold">Contribution activity</h3>
                 <span className="text-[10px] uppercase tracking-wider text-muted/70">
                   Representative
                 </span>
               </div>
-              <div className="mt-5 overflow-x-auto pb-2">
+              <div className="mt-5 -mx-4 px-4 overflow-x-auto pb-2 sm:-mx-7 sm:px-7">
                 <div
                   className="grid w-max grid-flow-col gap-[3px]"
                   style={{ gridTemplateRows: `repeat(${DAYS}, 10px)` }}
@@ -97,7 +97,7 @@ export function GithubShowcase() {
           </Reveal>
 
           {/* Stats + languages */}
-          <div className="flex flex-col gap-6">
+          <div className="flex min-w-0 flex-col gap-6">
             <Reveal delay={0.1}>
               <div className="card-surface grid grid-cols-3 divide-x divide-line p-2">
                 {GH_STATS.map((stat) => (
