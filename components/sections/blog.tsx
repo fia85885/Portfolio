@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 import { BLOG_POSTS } from "@/constants/blog";
 import { Badge } from "@/components/ui/badge";
@@ -21,16 +22,17 @@ export function Blog() {
           {BLOG_POSTS.map((post, i) => (
             <Reveal key={post.title} delay={0.08 * i}>
               <article className="card-surface group flex h-full flex-col overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lift">
-                {/* Typographic cover */}
+                {/* Cover image — gradient stays as the loading backdrop */}
                 <div
-                  className={`relative flex aspect-[16/10] items-center justify-center overflow-hidden bg-gradient-to-br ${post.hue}`}
+                  className={`relative aspect-[16/10] overflow-hidden bg-gradient-to-br ${post.hue}`}
                 >
-                  <span
-                    className="select-none text-6xl font-bold tracking-tighter text-ink/15 transition-transform duration-700 group-hover:scale-110 dark:text-white/15"
-                    aria-hidden
-                  >
-                    {post.glyph}
-                  </span>
+                  <Image
+                    src={post.image}
+                    alt={`Cover for “${post.title}”`}
+                    fill
+                    sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  />
                   <span className="absolute left-4 top-4">
                     <Badge variant="dark" size="sm">
                       {post.tag}

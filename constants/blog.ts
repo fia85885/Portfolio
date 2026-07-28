@@ -10,6 +10,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "5 min read",
     glyph: "RAG",
     hue: "from-sky-200/70 to-blue-300/50 dark:from-sky-500/20 dark:to-blue-500/10",
+    image: "/blog/rag.png",
   },
   {
     title: "Building MCP Servers for AI Assistants",
@@ -19,6 +20,7 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "6 min read",
     glyph: "MCP",
     hue: "from-zinc-200/80 to-slate-300/60 dark:from-zinc-500/20 dark:to-slate-500/10",
+    image: "/blog/mcp.png",
   },
   {
     title: "Prompt Engineering Patterns That Hold Up",
@@ -28,5 +30,6 @@ export const BLOG_POSTS: BlogPost[] = [
     readTime: "4 min read",
     glyph: "LLM",
     hue: "from-indigo-200/70 to-violet-300/50 dark:from-indigo-500/20 dark:to-violet-500/10",
+    image: "/blog/llm.png",
   },
 ];

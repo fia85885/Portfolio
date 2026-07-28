@@ -79,6 +79,7 @@ export type BlogPost = {
   readTime: string;
   glyph: string;
   hue: string;
+  image: string;
 };
 
 export type PinnedRepo = {
