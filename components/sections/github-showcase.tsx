@@ -99,49 +99,57 @@ export function GithubShowcase() {
           {/* Stats + languages */}
           <div className="flex min-w-0 flex-col gap-6">
             <Reveal delay={0.1}>
-              <div className="card-surface grid grid-cols-3 divide-x divide-line p-2">
-                {GH_STATS.map((stat) => (
-                  <div key={stat.label} className="px-4 py-5 text-center">
-                    <p className="text-lg font-semibold tracking-tight">
-                      {stat.value}
-                    </p>
-                    <p className="mt-1 text-[10px] uppercase tracking-wider text-muted">
-                      {stat.label}
-                    </p>
+              <div className="card-surface overflow-hidden p-2">
+                <div className="scrollbar-x overflow-x-auto">
+                  <div className="grid min-w-[400px] grid-cols-3 divide-x divide-line">
+                    {GH_STATS.map((stat) => (
+                      <div key={stat.label} className="px-4 py-5 text-center">
+                        <p className="text-lg font-semibold tracking-tight">
+                          {stat.value}
+                        </p>
+                        <p className="mt-1 text-[10px] uppercase tracking-wider text-muted">
+                          {stat.label}
+                        </p>
+                      </div>
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </Reveal>
             <Reveal delay={0.18}>
-              <div className="card-surface flex-1 p-7">
+              <div className="card-surface flex-1 p-5 sm:p-7">
                 <h3 className="text-sm font-semibold">Top languages</h3>
-                <div className="mt-4 flex h-2.5 overflow-hidden rounded-full">
-                  {TOP_LANGUAGES.map((lang) => (
-                    <span
-                      key={lang.name}
-                      className={lang.color}
-                      style={{ width: `${lang.pct}%` }}
-                      aria-hidden
-                    />
-                  ))}
-                </div>
-                <ul className="mt-4 space-y-2">
-                  {TOP_LANGUAGES.map((lang) => (
-                    <li
-                      key={lang.name}
-                      className="flex items-center justify-between text-sm"
-                    >
-                      <span className="flex items-center gap-2 text-muted">
+                <div className="scrollbar-x -mx-1 overflow-x-auto px-1 pb-2">
+                  <div className="min-w-[280px]">
+                    <div className="mt-4 flex h-2.5 overflow-hidden rounded-full">
+                      {TOP_LANGUAGES.map((lang) => (
                         <span
-                          className={`h-2 w-2 rounded-full ${lang.color}`}
+                          key={lang.name}
+                          className={lang.color}
+                          style={{ width: `${lang.pct}%` }}
                           aria-hidden
                         />
-                        {lang.name}
-                      </span>
-                      <span className="text-xs text-muted">{lang.pct}%</span>
-                    </li>
-                  ))}
-                </ul>
+                      ))}
+                    </div>
+                    <ul className="mt-4 space-y-2">
+                      {TOP_LANGUAGES.map((lang) => (
+                        <li
+                          key={lang.name}
+                          className="flex items-center justify-between gap-4 text-sm"
+                        >
+                          <span className="flex items-center gap-2 whitespace-nowrap text-muted">
+                            <span
+                              className={`h-2 w-2 rounded-full ${lang.color}`}
+                              aria-hidden
+                            />
+                            {lang.name}
+                          </span>
+                          <span className="text-xs text-muted">{lang.pct}%</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
               </div>
             </Reveal>
           </div>
