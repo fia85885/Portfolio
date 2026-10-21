@@ -12,7 +12,7 @@ export const EDUCATION: EducationItem[] = [
   },
   {
     period: "Nov 2021 — May 2025",
-    degree: "B.Tech in CSE — Artificial Intelligence & Machine Learning",
+    degree: "B.E in CSE — Artificial Intelligence & Machine Learning",
     school: "Lords Institute of Engineering and Technology, Osmania University",
     place: "Hyderabad, India",
     detail: "GPA 8.93 / 10",
